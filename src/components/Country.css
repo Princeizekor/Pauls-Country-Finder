@@ -39,7 +39,7 @@ body {
 }
 .darkmode {
     cursor: pointer;
-    width: 150px;
+    width: 100px;
     display: flex;
 }
 .darkmode button {
@@ -119,6 +119,7 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    min-height: 100vh;
     margin: 0%;
     overflow: hidden;
     height: auto;
@@ -141,7 +142,7 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 1000000000000000000;
-    background-color: var(--droperbgColor);
+    background: transparent;
 }
 .spin {
     width: 400px;
@@ -197,14 +198,15 @@ body {
     position: static;
     top: 10%;
     left: 0%;
+    bottom: 0%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1440px;
     margin: 0% auto;
-    height: 100%;
+    min-height: 100vh;
     background-color: var(--bgColor);
-    padding: 100px 50px;
+    padding: 100px 20px;
 }
 .firstModal {
     max-width: 50%;
@@ -296,7 +298,7 @@ body {
         margin-bottom: 20px;
     }
     .back {
-        top: 5%;
+        margin-top: 35px;
     }
     .Modalinfo {
         flex-direction: column;
@@ -340,7 +342,7 @@ body {
         margin-top: 5%;
     }
     .back {
-        top: 0%;
+        margin-top: 50px;
     }
     .Modalinfo {
         height: 50%;

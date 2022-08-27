@@ -20,6 +20,7 @@ function Modal({dark, setDark}) {
             setError(true)
             setLoading(false)
         })
+        setDark(dark)
     }, [])
     return (
         <div className={dark ? 'dark' : null}>

@@ -7,6 +7,7 @@ function Country({dark, setDark}) {
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(true)
     const [search, setSearch] = useState('')
+    const [select, setSelect] = useState('')
     const [drop, setDrop] = useState(false)
 
     useEffect(() => {
@@ -28,16 +29,18 @@ function Country({dark, setDark}) {
         setSearch(e.target.value)
     }
 
-    // const handleSelect = (e) => {
-    //     setSelect(e.target.innerText)
-    // }
+    const handleSelect = (e) => {
+        setSelect(e.target.innerText)
+    }
 
     const handleDroper = () => {
         setDrop(!drop)
     }
 
-    const data = country?.filter(data => data?.name.toLowerCase().includes(search.toLowerCase()))
-    // const more = country?.filter(more => more?.regions.toLowerCase().includes(select.toLowerCase()))
+    const data = country?.filter(data => (
+        data?.name.toLowerCase().includes(search.toLowerCase()) &&
+        data?.region.toLowerCase().includes(select.toLowerCase())
+    ))
     
     return (
         <div className={dark ? 'dark' : null}>
@@ -57,11 +60,11 @@ function Country({dark, setDark}) {
                     <div className={drop ? 'open' : 'showDropDown'} >
                         <div className="color2">
                         <div className="droper">
-                    <p className="region">Africa</p>
-                    <p className="region">America</p>
-                    <p className="region">Asia</p>
-                    <p className="region">Europe</p>
-                    <p className="region">Oceania</p>
+                    <p className="region" onClick={handleSelect} value={select}>Africa</p>
+                    <p className="region" onClick={handleSelect} value={select}>America</p>
+                    <p className="region" onClick={handleSelect} value={select}>Asia</p>
+                    <p className="region" onClick={handleSelect} value={select}>Europe</p>
+                    <p className="region" onClick={handleSelect} value={select}>Oceania</p>
                     </div>
                     </div>
                     </div>

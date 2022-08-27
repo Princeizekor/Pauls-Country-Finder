@@ -1,0 +1,358 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body {
+    --bgColor: hsl(0, 0%, 100%);
+    --fontcolor:  hsl(200, 15%, 8%);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.dark {
+    --bgColor: hsl(207, 26%, 17%);
+    --fontcolor:  hsl(0, 0%, 100%);
+    background: var(--bgColor);
+    color: var(--fontcolor) !important;
+    --placeObjectsbgColor: hsl(207, 26%, 17%);
+    --navbarbgColor: hsl(207, 26%, 17%);
+    --searchbgColor:  hsl(207, 26%, 17%);
+    --search-inputbgColor: hsl(207, 26%, 17%);
+    --search-barbgColor: hsl(207, 26%, 17%);
+    --search-inputcolor: hsl(0, 0%, 100%);
+    --select-barbgColor: hsl(207, 26%, 17%);
+    --droperbgColor: hsl(207, 26%, 17%);
+}
+#navbar {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px 20px 30px;
+    background: var(--bgColor);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0%;
+    z-index: 1000000;
+}
+.mode {
+    color: var(--fontcolor)
+}
+.darkmode {
+    cursor: pointer;
+    width: 150px;
+    display: flex;
+}
+.darkmode button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.search{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 45px;
+    margin: 0%;
+    position: sticky;
+    top: 65px;
+    background: var(--searchbgColor);
+}
+.search-bar{
+    width: 30vw;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    padding: 10px 0 10px 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background: var(--search-barbgColor);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.search-bar i {
+    margin-left: 2%;
+    margin-top: 2%;
+}
+.search-input{
+    width: 20vw;
+    margin-left: 30px;
+    border-style: none;
+    outline: none;
+    font-weight: bold;
+    height:30px;
+    background: var(--search-inputbgColor);
+    color: var(--search-inputcolor);
+}
+.select-bar{
+    background-color: var(--search-barbgColor);
+    height: 50px;
+    width: 200px;
+    margin-top: 40px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.color {
+    position: sticky;
+    top: 65px;
+    background-color: white;
+}
+.color2 {
+    background-color: white;
+}
+.showDropDown {
+    display: none;
+}
+.open {
+    display: block;
+}
+.droper {
+    background-color: var(--droperbgColor);
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    margin-top: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.droper p {
+    line-height: 25px;
+}
+.contain {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0%;
+    overflow: hidden;
+    height: auto;
+}
+.contain a {
+    text-decoration: none;
+    color: var(--fontcolor);
+}
+
+.loader {
+    min-width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000000000000000000;
+    background-color: var(--droperbgColor);
+}
+.spin {
+    width: 400px;
+    height: auto;
+}
+.placeObjects {
+    width: 250px;
+    height: 320px;
+    border-radius: 10px;
+    margin: 40px;
+    margin-bottom: 80px;
+    background:  var(--placeObjectsbgColor);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+   
+}
+.imageWrapper {
+    width: 100%;
+
+}
+.imageWrapper img{
+    width: 100%;
+    height: 150px;
+    border-radius: 5px 5px 0px 0px;
+    object-fit: cover;
+}
+.countryinfo {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+.countryinfo h5 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.countryinfo p {
+    line-height: 25px;
+}
+.selectRegion {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+.countryMode {
+    position: fixed;
+    top: 10%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bgColor);
+    padding: 50px;
+}
+.Modal {
+    position: static;
+    top: 10%;
+    left: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0% auto;
+    height: 100%;
+    background-color: var(--bgColor);
+    padding: 100px 50px;
+}
+.firstModal {
+    max-width: 50%;
+}
+.firstModal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.secondModal {
+    width: 50%;
+    margin-left: 5%;
+}
+.secondModal h1 {
+    margin-bottom: 30px;
+}
+.back {
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    width: 100px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: var(--bgColor);
+    color: var(--fontcolor);
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.Modalinfo {
+    display: flex;
+    justify-content: space-between;
+}
+.modalText {
+    line-height: 30px;
+}
+.modalTexttwo {
+    line-height: 30px;
+}
+.show {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .contain {
+        flex-direction: column;
+    }
+    .placeObjects {
+        width: 85%;
+
+    }
+    .search{
+        flex-direction: column;
+        padding: 0px 40px;
+        top: 60px;
+    }
+    .search-bar{
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    .search-input{
+        width: 100%;
+    }
+    .countryMode {
+        position: fixed;
+        top: 5%;
+        left: 0%;
+        width: 100%;
+        height: 100vh;
+    }
+    .Modal {
+        flex-direction: column;
+        justify-content: none;
+    }
+    .firstModal {
+        max-width: 100%;
+        height: 40%;
+    }
+    .firstModal img {
+        margin-top: 15%;
+    }
+    .secondModal {
+        width: 100%;
+        margin-left: 0%;
+        top: 0%;
+    }
+    .secondModal h1 {
+        margin-bottom: 20px;
+    }
+    .back {
+        top: 5%;
+    }
+    .Modalinfo {
+        flex-direction: column;
+        width: 100%;
+        top: 0%;
+        margin: 0%;
+    }
+    .modalText {
+        margin-bottom: 30px;
+        line-height: 20px;
+    }
+    .modalTexttwo {
+        line-height: 20px;
+    }
+}
+@media screen and (max-width: 540px) {
+    .placeObjects {
+        width: 80%;
+
+    }
+    .Modal {
+        justify-content: none;
+    }
+    #navbar {
+        padding: 20px 0px 20px 20px;
+    }
+    .search{
+        padding: 0px 30px;
+        top: 55px;
+    }
+    .countryMode {
+        top: 10%;
+    }
+    .secondModal h1 {
+        margin-bottom: 10px;
+    }
+    .firstModal {
+        height: 40%;
+    }
+    .firstModal img {
+        margin-top: 5%;
+    }
+    .back {
+        top: 0%;
+    }
+    .Modalinfo {
+        height: 50%;
+        width: 100%;
+        top: 0%;
+        margin: 0%;
+    }
+    .modalText {
+        margin-bottom: 10px;
+        line-height: 20px;
+    }
+    .modalTexttwo {
+        line-height: 20px;
+    }
+}
